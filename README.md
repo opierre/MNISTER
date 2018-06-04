@@ -42,24 +42,24 @@ Before running the tests, you have to make sure you have the following directory
 ```
 ./WORKSPACE
 	|-- images
-	|		|-- labels.txt
-	|		|-- own_0.png
-	|		|-- own_1.png
-	|		|-- own_2.png
-	|		|-- own_3.png
-	|		|-- own_4.png
-	|		|-- own_5.png
-	|		|-- own_6.png
-	|		|-- own_7.png
-	|		|-- own_8.png
-	|		|-- own_9.png
-	|		|-- t10k-images-idx3-ubyte.gz
-	|		|-- t10k-labels-idx1-ubyte.gz
-	|		|-- train-images-idx3-ubyte.gz
-	|		|-- train-labels-idx1-ubyte.gz
+	|	|-- labels.txt
+	|	|-- own_0.png
+	|	|-- own_1.png
+	|	|-- own_2.png
+	|	|-- own_3.png
+	|	|-- own_4.png
+	|	|-- own_5.png
+	|	|-- own_6.png
+	|	|-- own_7.png
+	|	|-- own_8.png
+	|	|-- own_9.png
+	|	|-- t10k-images-idx3-ubyte.gz
+	|	|-- t10k-labels-idx1-ubyte.gz
+	|	|-- train-images-idx3-ubyte.gz
+	|	|-- train-labels-idx1-ubyte.gz
 	|-- scripts
-	|		|-- cpufreq.sh
-	|		|-- launch.sh
+	|	|-- cpufreq.sh
+	|	|-- launch.sh
 	|-- base.py
 	|-- init_test.py
 	|-- mnist.py
@@ -83,12 +83,12 @@ $ python3 mnist_export.py --training_iteration=20000 --model_version=1
 ```
 ./SAVED_MODEL
 	|-- 1
-	|	|-- variables
-	|			|-- variables.data
-	|			|-- variables.index
-	|	|-- saved_model.pb
+	|   |-- variables
+	|	   |-- variables.data
+	|	   |-- variables.index
+	|   |-- saved_model.pb
 	|-- graph_for_model_1_xxxxxxxx
-	|			|-- events.out.tfevents.xxxxxxxxxx.user
+	|   |-- events.out.tfevents.xxxxxxxxxx.user
 ```
 
 If you want to visualize the graph and other metadata in Mozilla Firefox browser, you can run:
