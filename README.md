@@ -1,8 +1,8 @@
-# MNIST example
+# MNIST
 
 Handwritten digits recognition using TensorFlow framework from Google
 
-## Get Started
+## Getting Started
 
 Follow these instructions to get a copy of the project and make it run on your local machine (only tested with Ubuntu 16.04). 
 
@@ -15,7 +15,7 @@ $ python3 -V
 $ pip3 -V
 ```
 
-### Instal
+### Installing
 
 Install [TensorFlow](http://www.tensorflow.org/install/install_linux) for your GPU with the pip3 method and check your configuration by running the Hello World example:
 
@@ -35,7 +35,7 @@ If the system outputs your Hello World sentence as the following one, then you a
 'Hello from TensorFlow!'
 ```
 
-## Run the tests
+## Running the tests
 
 Before running the tests, you have to make sure you have the following directory tree:
 
@@ -70,7 +70,7 @@ Before running the tests, you have to make sure you have the following directory
 
 Then, you should run the [cpufreq.sh](https://github.com/polivier2/MNISTER/blob/master/scripts/cpufreq.sh) according to the number of your number of CPU cores. This script sets the performance mode over all CPU cores and stop the load balancing.
 
-### Export your neural network
+### Exporting your neural network
 
 In order to train the MNIST neural network on your GPU, you should run:
 
@@ -97,7 +97,7 @@ If you want to visualize the graph and other metadata in Mozilla Firefox browser
 $ tensorboard --logdir=/WORKSPACE/SAVED_MODEL/
 ```
 
-### Load your neural network and run inference with your own handwritten digit dataset
+### Loading your neural network and running inference with your own handwritten digit dataset
 
 Once your model has been trained and exported, you may want to load it without using the TensorFlow Serving API. [mnist_load.py](https://github.com/polivier2/MNISTER/blob/master/mnist_load.py) allows you to load your *saved_model.pb* locally and feed the input with your own handwritten digits images. In order to run inference, you have to store your image(s) in the images/ folder and name it *own_X.png*, X following the ascending order and starting from 0. Then, you have two different use cases:
 
