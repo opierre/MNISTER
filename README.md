@@ -1,4 +1,4 @@
-# MNIST
+# MNISTER
 
 Handwritten digits recognition using TensorFlow framework from Google
 
