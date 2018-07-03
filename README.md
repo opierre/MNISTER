@@ -10,7 +10,7 @@ Follow these instructions to get a copy of the project and make it run on your l
 
 You need to have Python 3.4+ and Pip3 installed on your Ubuntu machine. To check if it is correctly installed:
 
-```
+```python
 $ python3 -V
 $ pip3 -V
 ```
@@ -19,7 +19,7 @@ $ pip3 -V
 
 Install [TensorFlow](http://www.tensorflow.org/install/install_linux) for your GPU with the pip3 method and check your configuration by running the Hello World example:
 
-```
+```bash
 $ python3
 ```
 ```
@@ -31,7 +31,7 @@ $ python3
 
 If the system outputs your Hello World sentence as the following one, then you are ready to run the MNIST example:
 
-```
+```bash
 'Hello from TensorFlow!'
 ```
 
@@ -74,7 +74,7 @@ Then, you should run the [cpufreq.sh](https://github.com/polivier2/MNISTER/blob/
 
 In order to train the MNIST neural network on your GPU, you should run:
 
-```
+```bash
 $ python3 mnist_export.py --training_iteration=20000 --model_version=1
 ```
 
@@ -93,7 +93,7 @@ $ python3 mnist_export.py --training_iteration=20000 --model_version=1
 
 If you want to visualize the graph and other metadata in Mozilla Firefox browser, you can run:
 
-```
+```bash
 $ tensorboard --logdir=/WORKSPACE/SAVED_MODEL/
 ```
 
@@ -103,13 +103,13 @@ Once your model has been trained and exported, you may want to load it without u
 
 * **One picture with many handwritten digits:** for both use cases, you have to write your own *labels.txt* in the images/ folder. According to the pre-processing of this picture, you should start writting it from the bottom to the top of the image and label each digit. This step allows you to detect a possible error when running inference and thus to measure inference accuracy. Once labels are ready, you can run:
 
-```
+```bash
 $ python3 mnist_load.py --model_version=1 --digits_per_img=True --nb_images=1
 ``` 
 
 If the system outputs *Testing done!*, you are now able to visualize *image_finish.png* which has been written in the images/ folder thanks to OpenCV for Python. Otherwise, you must adjust the threshold value (T) in:
 
-```
+```python
 ret, im_th = cv2.threshold(im_gray, T, 255, cv2.THRESH_BINARY_INV) #line 130
 ```
 
@@ -117,13 +117,13 @@ This pre-processing step on your own dataset is neccessary to detect handwritten
 
 * **Many pictures with one handwritten digit:** for both use cases, you have to write your own *labels.txt* in the images/ folder. According to the pre-processing of these picture, you should start writting it from *own_0.png* to the last one of your dataset and label each digit. This step allows you to detect a possible error when running inference and thus to measure inference accuracy. Once labels are ready, you can run:
 
-```
+```bash
 $ python3 mnist_load.py --model_version=1 --digits_per_img=False --nb_images=9
 ``` 
 
 If the system outputs *Testing done!*, you are now able to visualize all *image_X.png* which have been written in the images/ folder thanks to OpenCV for Python. Otherwise, you must adjust the threshold value (T) in:
 
-```
+```python
 (thresh, gray) = cv2.threshold(gray, T, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
 ```
 
@@ -133,16 +133,16 @@ For each case, you can add these following options:
 
 * Dealing images with batchs: number of batchs should always be lesser than number of images when *--digits_per_img=False*
 
-```
+```bash
 $ python3 mnist_load.py --model_version=1 --digits_per_img=False --nb_images=9 --nb_batchs=4
 ``` 
 
 * Printing probabilities: you can choose if you want to print all results per image/batchs or just print the final result
 
-```
+```bash
 $ python3 mnist_load.py --model_version=1 --digits_per_img=False --nb_images=9 --print_prob=False 
 ``` 
 
-## Authors
+## Author
 
 * **Pierre OLIVIER** - [polivier2](https://github.com/polivier2)
