@@ -10,7 +10,7 @@ Follow these instructions to get a copy of the project and make it run on your l
 
 You need to have Python 3.4+ and Pip3 installed on your Ubuntu machine. To check if it is correctly installed:
 
-```python
+```bash
 $ python3 -V
 $ pip3 -V
 ```
