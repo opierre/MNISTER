@@ -4,7 +4,7 @@ Handwritten digits recognition using TensorFlow framework from Google
 
 ## Getting Started
 
-Follow these instructions to get a copy of the project and make it run on your local machine (only tested with Ubuntu 16.04). 
+Follow these instructions to get a copy of the project and make it run on your local machine (only tested with Ubuntu 16.04/18.04). 
 
 ### Prerequisites
 
@@ -68,7 +68,7 @@ Before running the tests, you have to make sure you have the following directory
 	|-- README.md	
 ```
 
-Then, you should run the [cpufreq.sh](https://github.com/polivier2/MNISTER/blob/master/scripts/cpufreq.sh) according to the number of your number of CPU cores. This script sets the performance mode over all CPU cores and stop the load balancing.
+Then, you can run [cpufreq.sh](https://github.com/polivier2/MNISTER/blob/master/scripts/cpufreq.sh) according to the number of CPU cores you have. This script sets the performance mode over all CPU cores and stop the load balancing.
 
 ### Exporting your neural network
 
